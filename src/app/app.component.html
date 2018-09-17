@@ -1,0 +1,30 @@
+<br/>
+<div class="container" style="color:red;text-align: center; font-family: Pacifico;">
+  <h1>TechBrunch - Love Calculator</h1>
+</div>
+<br/><br/><br/><br/>
+<div class="container" style="max-width: 500px;">
+  <span class="input-group-text" id="">Yours:</span>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">Full Name</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="firstFullName">
+  </div>
+  <br/>
+  <span class="input-group-text" id="">Hers:</span>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">Full Name</span>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="secondFullName">
+  </div>
+  <br/>
+  <button type="button" class="btn btn-danger" (click)="calculateLove();">Calculate!</button>
+  <br/>
+  <br/>
+  <div class="alert alert-danger" role="alert" *ngIf="finalResult !== ''">
+      <span>Your Compatibility Result is : {{finalResult}}</span>
+  </div>
+
+</div>
